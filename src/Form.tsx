@@ -1,6 +1,11 @@
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import errorImg from './assets/error.png'
 import { useState } from 'react';
+
+type FormInputs = {
+  radioSelection: string;
+  switchState: boolean;
+};
 
 export default function Form2() {
 
@@ -11,10 +16,10 @@ export default function Form2() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormInputs>();
 
 
-  const onSubmit = (data: any) => {
+  const onSubmit: SubmitHandler<FormInputs> = (data) => {
     alert(JSON.stringify({ ...data, switchState: switchState }));
     reset();
   };
