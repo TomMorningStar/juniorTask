@@ -3,11 +3,15 @@ import errorImg from './assets/error.png'
 import { useState } from 'react';
 
 type FormInputs = {
+  username: string;
+  password: string;
+  textLabel: string;
+  checkbox: boolean;
   radioSelection: string;
-  switchState: boolean;
+  dropdownTitle: string;
 };
 
-export default function Form2() {
+export default function Form() {
 
   const [switchState, setSwitchState] = useState(false);
 

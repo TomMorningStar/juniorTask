@@ -1,11 +1,11 @@
 
 
-import Form2 from './Form'
+import Form from './Form'
 
 function App() {
   return (
     <main>
-      <Form2 />
+      <Form />
     </main>
   )
 }
